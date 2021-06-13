@@ -4,14 +4,13 @@ import { Senyor } from "./components/Senyor";
 import { senyoresAPI } from "./senyoresAPI";
 
 function App() {
-  const [arraySenyores, setArraySenyores] = useState(senyoresAPI);
+  const [arraySenyores, setArraySenyores] = useState([]);
   const pasarSenyores = () => {
     setTimeout(() => {
       setArraySenyores(senyoresAPI);
     }, 2000);
   };
   pasarSenyores();
-
   return (
     <>
       <div className="contenedor-general container-xl">
