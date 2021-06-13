@@ -4,7 +4,7 @@ import { Senyor } from "./components/Senyor";
 import { senyoresAPI } from "./senyoresAPI";
 
 function App() {
-  const [arraySenyores, setArraySenyores] = useState([]);
+  const [arraySenyores, setArraySenyores] = useState(senyoresAPI);
   const pasarSenyores = () => {
     setTimeout(() => {
       setArraySenyores(senyoresAPI);
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div className="contenedor-general container-xl">
-        <Header />
+        <Header arraySenyores={arraySenyores} />
         <main className="principal mt-2 row">
           {arraySenyores.map((senyor) => (
             <Senyor
