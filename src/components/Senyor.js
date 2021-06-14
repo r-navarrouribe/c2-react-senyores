@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const Senyor = (props) => {
-  const { senyor } = props;
+  const { senyor, marcado2 } = props;
   const getInicial = () => {
     const nombreSeparado = senyor.nombre.split(" ");
     if (nombreSeparado[0].length < 3) {
@@ -20,7 +20,9 @@ export const Senyor = (props) => {
   };
   return (
     <article
-      className={`senyor col-8 offset-2 mb-4 ${marcado ? "marcado" : ""}`}
+      className={`senyor col-8 offset-2 mb-4 ${marcado ? "marcado" : ""} ${
+        marcado2 ? "marcado" : ""
+      }`}
       onClick={toggleMarcado}
     >
       <div className="row">
