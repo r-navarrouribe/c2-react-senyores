@@ -17,7 +17,9 @@ export const Header = (props) => {
         el dedo marcados
       </span>
       <button
-        className="marcar-todos col-2 offset-5 btn mt-2"
+        className={`marcar-todos col-2 offset-5 btn mt-2 ${
+          marcado2 ? "text-danger" : ""
+        }`}
         onClick={cambiarMarcado}
       >
         Marcar todos
